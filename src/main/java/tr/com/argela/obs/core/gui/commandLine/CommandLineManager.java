@@ -548,7 +548,6 @@ public class CommandLineManager implements GuiManager {
         getMainService().addExam(id, exam);
                 
     }
-    
     private void showGivenExams(String id) {
         hr();
         System.out.println("Öğretmenin verdiği derslere ait sınav bilgileri görüntüleniyor:");
@@ -558,13 +557,13 @@ public class CommandLineManager implements GuiManager {
         System.out.print(String.format("%50s", "NAME"));
         System.out.println("");
         for (Exam exam : exams) {
-            System.out.print(String.format("%5d", exam.getId()));
-            System.out.print(String.format("%5d", exam.getLectureId()));
+            System.out.print(String.format("%5s", exam.getId()));
+            System.out.print(String.format("%50s", exam.getLectureId()));
             System.out.print(String.format("%50s", exam.getName()));
 
             System.out.println("");
         }
-        
-    }
     
+    
+    }
 }

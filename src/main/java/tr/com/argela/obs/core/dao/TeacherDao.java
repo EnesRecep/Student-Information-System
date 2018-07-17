@@ -123,10 +123,13 @@ public class TeacherDao {
 
     
     public List<Exam> showGivenExams(EntityManager em , String id){
-        Query query = em.createQuery("select e from Exam e, Teacher t , Lecture l where "
-                + "t.id = l.tId and l.id = e.lectureId.id and t.id = :id");
+        Query query = em.createQuery("SELECT e from Exam e , Lecture l , Teacher t where"
+                + " t.id = l.tId and l.id = e.lectureId.id and t.id = :id");
         query.setParameter("id", Integer.parseInt(id));
+        
+        System.out.println(query.getResultList().get(0).toString());
         return (List<Exam>) query.getResultList();
+        
     }
 
 }
