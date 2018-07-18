@@ -388,7 +388,7 @@ public class CommandLineManager implements GuiManager {
         hr();
         System.out.println("Öğrenciye ait sınav bilgileri görüntüleniyor:");
         List<Exam> exams = getMainService().showExamInfo(id);
-        System.out.print(String.format("%5s", "ID"));
+        /*System.out.print(String.format("%5s", "ID"));
         System.out.print(String.format("%50s", "LECTURE ID"));
         System.out.print(String.format("%50s", "NAME"));
         System.out.println("");
@@ -399,7 +399,7 @@ public class CommandLineManager implements GuiManager {
 
             System.out.println("");
         }
-        
+        */
     }
 
     private void showGradeInfo() {
