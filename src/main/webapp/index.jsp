@@ -56,7 +56,7 @@
                                 <a href="./student/showLectures.jsp">Tüm Dersleri Görüntüle</a>
                             </li>
                             <li>
-                                <a href="register.html">Alınan Dersleri Görüntüle</a>
+                                <a href="./student/seeCourses.jsp">Alınan Dersleri Görüntüle</a>
                             </li>
                         </ul>
                     </li>
