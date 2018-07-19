@@ -67,8 +67,6 @@ public class Exam implements Serializable {
     @Column(name = "s_hour")
     private int sHour;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 255)
     @Column(name = "e_hour")
     private int eHour;
     @ManyToMany(mappedBy = "examCollection")
