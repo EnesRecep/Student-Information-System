@@ -1,13 +1,14 @@
-<%@page import="tr.com.argela.obs.core.models.Exam"%>
 <%@page import="java.util.Locale"%>
 <%@page import="java.util.ResourceBundle"%>
 <%@page import="java.util.List"%>
-<%@page import="tr.com.argela.obs.core.models.Student"%>
-<%@page import="tr.com.argela.obs.core.models.Lecture"%>
 <%@page import="tr.com.argela.obs.core.remote.MainService"%>
 <%@page import="tr.com.argela.obs.core.app.Application"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
+    
+    MainService mainService = Application.getApp().getMainService();
+  
+    
     ResourceBundle label = ResourceBundle.getBundle("label.label", new Locale("tr", "TR"));
 
 %>
@@ -34,14 +35,14 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+        <form action="loginCheck.jsp" method="post">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input class="form-control" id="id" name="username" type="text"  aria-describedby="emailHelp" placeholder="Enter username">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+            <input class="form-control" id="pass" name="password" type="password" placeholder="Password">
           </div>
           <div class="form-group">
             <div class="form-check">
@@ -49,7 +50,7 @@
                 <input class="form-check-input" type="checkbox"> Remember Password</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+           <br/><input type="submit" value="Submit">
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="register.html">Register an Account</a>
