@@ -264,7 +264,7 @@
                         <div class="modal-body">Mevcut oturumunuzu sonlandırmaya hazırsanız, aşağıdaki "Çıkış" ı seçiniz.</div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
-                            <a class="btn btn-primary" href="login.html">Çıkış</a>
+                            <a class="btn btn-primary" href="../login/login.jsp">Çıkış</a>
                         </div>
                     </div>
                 </div>

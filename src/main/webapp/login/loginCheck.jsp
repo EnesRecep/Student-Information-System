@@ -26,7 +26,7 @@
         if(username.length()==4 && mainservice.studentLogin(username, password))
             {
             session.setAttribute("username",username);
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("../index.jsp");
             }
         else
             response.sendRedirect("Error.jsp");
